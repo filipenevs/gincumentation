@@ -118,7 +118,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Gincumentation, Inc. Built with Docusaurus.`,
+      copyright: `Built with 💙 and Docusaurus | Made in 🇧🇷`,
     },
     prism: {
       theme: prismThemes.github,
