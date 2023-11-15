@@ -61,6 +61,18 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+  ],
+
   themeConfig: {
     navbar: {
       title: 'Gincumentation',
@@ -71,9 +83,14 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          to: 'api/intro',
+          label: 'API',
+          position: 'left',
         },
         {
           type: 'localeDropdown',
