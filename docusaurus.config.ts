@@ -121,7 +121,7 @@ const config: Config = {
       copyright: `Built with 💙 and Docusaurus | Made in 🇧🇷`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
