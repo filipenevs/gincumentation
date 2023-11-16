@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Benchmarks
 
-This information is provided by [official documentation](https://github.com/gin-gonic/gin#benchmarks):
+_This information is provided by [official documentation](https://github.com/gin-gonic/gin#benchmarks)_
 
 Gin uses a custom version of [HttpRouter](https://github.com/julienschmidt/httprouter), [see all benchmarks details](https://github.com/gin-gonic/gin/blob/master/BENCHMARKS.md).
 
