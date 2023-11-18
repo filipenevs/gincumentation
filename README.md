@@ -13,11 +13,11 @@ This repository contains detailed and intuitive documentation for the Gin Framew
 
 ## Use of Official Information
 
-This documentation has been enriched with information directly from the [official Gin documentation](). We have done this to ensure accuracy and completeness. We have also included additional interpretations and explanations to make the concepts more accessible.
+This documentation has been enriched with information directly from the [official Gin documentation](https://gin-gonic.com/docs/). We have done this to ensure accuracy and completeness. We have also included additional interpretations and explanations to make the concepts more accessible.
 
 ## License
 
-This work is distributed under the same MIT license as the Gin Framework. A copy of Gin's original license is included in this repository. See the `LICENSE` and `LICENSE-Gin` file for more details.
+This work is distributed under the same MIT license as the Gin Framework. A copy of Gin's original license is included in this repository. See the [`LICENSE`](https://github.com/filipenevs/gincumentation/blob/main/LICENSE) and [`LICENSE-Gin`](https://github.com/filipenevs/gincumentation/blob/main/LICENSE-Gin) file for more details.
 
 ## Contributions
 
