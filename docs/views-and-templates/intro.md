@@ -9,7 +9,7 @@ Serving HTML layouts in Gin involves using Gin's HTML rendering capabilities to 
 ## Understanding HTML Templates in Gin
 
 ### HTML Templates
-  - Gin uses Go's `html/template` package to process HTML templates. This package allows you to embed Go code in your HTML files, enabling dynamic content rendering.
+  - Gin uses Go's [`html/template`](https://pkg.go.dev/html/template) package to process HTML templates. This package allows you to embed Go code in your HTML files, enabling dynamic content rendering.
   - Templates help separate your application's business logic from its presentation layer.
 
 ### Why Serve HTML in Gin
