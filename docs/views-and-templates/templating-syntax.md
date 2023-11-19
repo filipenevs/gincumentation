@@ -47,7 +47,7 @@ Gin uses Go's built-in [html/template](https://pkg.go.dev/html/template) package
 {{end}}
 ```
 
-```go title="templates/main.go"
+```go title="main.go"
 func main() {
   router := gin.Default()
   router.LoadHTMLGlob("templates/*")
