@@ -34,6 +34,20 @@ If you need to serve a single static file, use the `StaticFile` function. This i
   r.StaticFile("/favicon.ico", "./resources/favicon.ico")
   ```
 
+:::warning Caution
+
+Using `StaticFile` with a path like `/resources.ico` does not work if `resources` is a directory in your project.
+
+
+```go
+// Problematic configuration
+r.StaticFile("/resources.ico", "./resources/favicon.ico")
+```
+**Reason:** The server may confuse the URL path segment with a directory name, leading to routing issues.
+
+**Solution:** Ensure the URL path for static files does not conflict with directory names. Use unique and clear paths.
+:::
+
 ### Using StaticFS Function
 
 For more control over serving static files, you can use the `StaticFS` function. This function is useful when you want to use an in-memory filesystem or a custom `http.FileSystem`.
