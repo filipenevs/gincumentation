@@ -25,7 +25,7 @@ Partials in Gin, as in many web frameworks, are reusable template segments that 
 - A partial is just a regular template file that contains a segment of HTML code.
 - Create a partial as you would create any other template, but typically it represents a smaller, self-contained segment of the page.
 
-```html title="template/partials/header.tmpl"
+```html title="templates/partials/header.tmpl"
 <header>
   <nav>
     <!-- Navigation items -->
@@ -38,7 +38,7 @@ Partials in Gin, as in many web frameworks, are reusable template segments that 
 - Use the `{{ template }}` action to include a partial in another template.
 - When rendering the main template, Gin will replace the `{{ template }}` action with the content of the partial.
 
-```html title="template/main.tmpl"
+```html title="templates/pages/main.tmpl"
 <html>
 <body>
     {{ template "header.tmpl" . }}
@@ -54,11 +54,32 @@ Partials in Gin, as in many web frameworks, are reusable template segments that 
 
 ## Loading and Rendering in Gin
 
-### Loading Templates:
+### Loading Templates
 
 Use `router.LoadHTMLGlob("templates/**/*")` in Gin to load all templates, including partials, if they are within the templates directory.
 
-### Rendering a Template with Partials:
+:::warning Caution
+
+When using `LoadHTMLGlob` in Gin with the pattern `templates/**/*`, there is a known limitation where templates in the root directory (`templates`) may not be loaded correctly. This issue arises specifically when using the `/**/*` glob pattern, which is intended to load all files from subdirectories.
+
+In this case, while templates in subdirectories of `templates` are loaded, a template directly in the templates directory might not be recognized.
+
+To address the issue of Gin not loading templates from the root templates directory when using the `templates/**/*` glob pattern, a recommended approach is to restructure your templates. This involves moving all templates from the root of the `templates` directory into a specific subfolder. This change ensures that all templates are loaded correctly, avoiding the limitations of Gin's `LoadHTMLGlob` function:
+
+```
+.
+├── main.go
+└── templates
+    ├── pages
+    │   └── main.tmpl
+    ├── partials
+    │   └── header.tmpl
+    └── subfolder1
+        └── template1.tmpl
+```
+:::
+
+### Rendering a Template with Partials
 
 When you render a template using `c.HTML()`, Gin will process the main template and all included partials.
 
